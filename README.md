@@ -15,4 +15,5 @@ Es un generador de Landing Pages Utilizando GrapesJS y estilos de bootstrap v4.
 - Animaciones
 - Clases predeterminadas de bootstrap
 - Elementos interactivos
-- ...
+- Animaciones de texto
+

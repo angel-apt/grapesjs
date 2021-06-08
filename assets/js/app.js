@@ -7,7 +7,8 @@ const editor = grapesjs.init({
     type: 'local', 
     // TODO: La opción de fradMode es opcional ya que si se habilita el modo responsivo se modifica y no respeta la posicion 
     // para ajustarse a la nueva pantalla a menos que el diseño creado sea unicamente para resoluciones mayores a 1300px.
-    // dragMode: 'absolute', 
+    
+    /* dragMode: 'absolute', */
     
     stepsBeforeSave: 1,
     noticeOnUnload: 0,
@@ -56,7 +57,6 @@ const editor = grapesjs.init({
     },
     plugins: [
         'gjs-preset-webpage',
-        'grapesjs-blocks-bootstrap4',
         'grapesjs-rally-widgets',
         'grapesjs-slider',
         'grapesjs-table',
@@ -70,7 +70,8 @@ const editor = grapesjs.init({
         'grapesjs-script-editor',
         'grapesjs-typed',
         'grapesjs-indexeddb',
-        'grapesjs-rulers'
+        'grapesjs-blocks-bootstrap4',
+        'grapesjs-rulers',
         
     ],
     pluginsOpts: {
@@ -106,9 +107,6 @@ const editor = grapesjs.init({
     }
 
 });
-
-editor.on('storage:start', startLoading);
-editor.on('storage:end', endLoading);
 
 editor.I18n.addMessages({
     en: {
@@ -228,6 +226,21 @@ panelViews.get('buttons').add([{
   command: 'ruler-visibility',
   id: 'ruler-visibility'
 }]);
+
+editor.Panels.addButton('options', [{
+    id: 'save-db',
+    className: 'fa fa-file-archive-o icon-blank',
+    command: 'save-db',
+    attributes: {title: 'Generar pagina'}
+}]);
+
+editor.Commands.add('save-db', {
+   run: function()
+   {
+    editor.runCommand('gjs-export-zip');
+      console.log("templateData");
+   }
+});
 
 
 
