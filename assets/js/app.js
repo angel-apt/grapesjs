@@ -5,6 +5,7 @@ const editor = grapesjs.init({
     fromElement: true,
     showOffsets: 1,
     type: 'local', 
+    
     // TODO: La opción de fradMode es opcional ya que si se habilita el modo responsivo se modifica y no respeta la posicion 
     // para ajustarse a la nueva pantalla a menos que el diseño creado sea unicamente para resoluciones mayores a 1300px.
     
@@ -72,6 +73,7 @@ const editor = grapesjs.init({
         'grapesjs-indexeddb',
         'grapesjs-blocks-bootstrap4',
         'grapesjs-rulers',
+        'gjs-blocks-basic',
         
     ],
     pluginsOpts: {
@@ -79,17 +81,13 @@ const editor = grapesjs.init({
         'grapesjs-slider': {},
         'grapesjs-tabs': {},
         'grapesjs-style-gradient': {},
-        'grapesjs-style-bg': { /* options */ },
-        'grapesjs-script-editor': { /* options */ },
-        'grapesjs-typed': { /* options */ },
-        'grapesjs-rulers': { /* options */ },
-        'grapesjs-blocks-bootstrap4': {
-            blocks: {},
-            blockCategories: {},
-            labels: {},
-        },
-        formPredefinedActions: null,
-        optionsStringSeparator: '::'
+        'grapesjs-style-bg': {},
+        'grapesjs-script-editor': {},
+        'grapesjs-typed': {},
+        'grapesjs-rulers': {},
+        'grapesjs-blocks-bootstrap4': {},
+        'gjs-blocks-basic': {},
+
     },
     // 
     canvas: {
@@ -149,25 +147,24 @@ editor.DomComponents.addType('input', {
     model: {
       defaults: {
         traits: [
-          // Strings are automatically converted to text types
-          'name', // Same as: { type: 'text', name: 'name' }
+          'name',
           'placeholder',
           {
-            type: 'select', // Type of the trait
-            label: 'Type', // The label you will see in Settings
-            name: 'type', // The name of the attribute/property to use on component
+            type: 'select',
+            label: 'Type', 
+            name: 'type', 
             options: [
               { id: 'text', name: 'Text'},
               { id: 'email', name: 'Email'},
               { id: 'password', name: 'Password'},
               { id: 'number', name: 'Number'},
+              { id: 'text', name: 'Phone'},
+              { id: 'file', name: 'File'},
             ]
           }, {
             type: 'checkbox',
             name: 'required',
         }],
-        // As by default, traits are binded to attributes, so to define
-        // their initial value we can use attributes
         attributes: { type: 'text', required: true },
       },
     },
@@ -217,6 +214,7 @@ const pn = editor.Panels;
 const panelViews = pn.addPanel({
   id: 'options'
 });
+
 panelViews.get('buttons').add([{
   attributes: {
     title: 'Toggle Rulers'
@@ -238,10 +236,10 @@ editor.Commands.add('save-db', {
    run: function()
    {
     editor.runCommand('gjs-export-zip');
-      console.log("templateData");
    }
 });
 
 
 
 window.editor = editor;
+

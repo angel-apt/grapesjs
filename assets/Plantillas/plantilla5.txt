@@ -1,0 +1,247 @@
+
+<style>
+	* {
+	left: 0;
+	top: 0;
+	margin: 0px;
+	padding: 0px;
+	background-color: #ffeb3b;
+    font-family: 'Alegreya', sans-serif;
+
+}
+
+@media all and (orientation:landscape) {
+	.hello {
+		font-size: 1.70rem;
+	}
+	
+	.description {
+		font-size: 1.2rem;
+	}
+	
+	a {
+		font-size: 2.5em;
+	}
+	
+	blockquote {
+		font-size: 18px;
+	}
+
+	blockquote:before {
+		font-size: 32px;
+		content: '“'
+	}
+	blockquote:after {
+		font-size: 32px;
+		content: '”';
+	}
+}
+
+@media (max-width: 576px) {
+	.hello {
+		font-size: 1.70rem;
+	}
+	
+	.description {
+		font-size: .9rem;
+	}
+	
+	a {
+		font-size: 1.8em;
+	}
+	
+	blockquote {
+		font-size: 10px;
+	}
+
+	blockquote:before {
+		font-size: 32px;
+		content: '“'
+	}
+	blockquote:after {
+		font-size: 32px;
+		content: '”';
+	}
+}
+
+@media (min-width: 768px) {
+	.hello {
+		font-size: 2.10rem;
+	}
+	
+	.description {
+		font-size: 1.5rem;
+	}
+	
+	a {
+		font-size: 2.5em;
+	}
+	
+	blockquote {
+		font-size: 24px;
+	}
+
+	blockquote:before {
+		font-size: 48px;
+		content: '“'
+	}
+	blockquote:after {
+		font-size: 48px;
+		content: '”';
+	}
+}
+
+@media (min-width: 992px) {
+	.hello {
+		font-size: 2.50rem;
+	}
+	
+	.description {
+		font-size: 1.6rem;
+	}
+	
+	a {
+		font-size: 2.5em;
+	}
+	
+	blockquote {
+		font-size: 24px;
+	}
+
+	blockquote:before {
+		font-size: 48px;
+		content: '“'
+	}
+	blockquote:after {
+		font-size: 48px;
+		content: '”';
+	}
+}
+
+@media (min-width: 1200px) {
+	.hello {
+		font-size: 3.75rem;
+	}
+	
+	.description {
+		font-size: 2rem;
+	}
+	
+	a {
+		font-size: 3em;
+	}
+	
+	blockquote {
+		font-size: 24px;
+	}
+
+	blockquote:before {
+		font-size: 48px;
+		content: '“'
+	}
+	blockquote:after {
+		font-size: 48px;
+		content: '”';
+	}
+}
+
+.container {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.col {
+	justify-self: start;
+	align-self: start;
+	grid-column: div;
+}
+
+.hello {
+	margin-top: 10vh;
+	font-weight: 600;
+}
+
+.hello:before {
+	content: "Hello, I'm Ali!"
+}
+
+.description {
+	font-weight: 600;
+}
+
+.description:before {
+	content: 'Full Stack Dev | Open-Source Lover | Blogger | Ninja'
+}
+
+.icons {
+	margin-top: 2vh;
+}
+
+.icons a {
+	margin-right: 15px;
+	color: #1e1e1e;
+}
+
+.icons a, .icons a:visited, .icons a:hover, .icons a:active {
+	text-decoration:none;
+	color: inherit;
+}
+
+.orange:hover {
+	color: #d9480f !important;
+}
+
+.soft-orange:hover {
+	color: #fca326 !important;
+}
+
+.octocat:hover {
+	color: #3e3e3e !important;
+}
+
+.wp:hover {
+	color:#0087be !important;
+}
+
+.linkedin:hover {
+	color: #0077b5 !important;
+}
+
+.facebook:hover {
+	color: #4267b2 !important;
+}
+
+.mail:hover {
+	color: #347171 !important;
+}
+
+.footer {
+	margin:5px 0px 5px 0px;
+}
+
+
+.quote:before {
+	content: 'In real open source, you have the right to control your own destiny.'
+}
+</style>
+
+
+<div class="container">
+	<div class="hello col"></div>
+	<div class="description col"></div>
+	<div class="icons col">
+		<a class="octocat" href="https://github.com/aligoren" target="_blank"><i class="fab fa-github"></i></a>
+		<a class="soft-orange" href="https://gitlab.com/aligoren" target="_blank"><i class="fab fa-gitlab"></i></a>
+		<a class="orange" href="https://stackoverflow.com/users/3821823/ali" target="_blank"><i class="fab fa-stack-overflow"></i></a>
+		<a class="wp" href="https://aligoren.com" target="_blank"><i class="fab fa-wordpress"></i></a>
+		<a class="linkedin" href="https://www.linkedin.com/in/gorenali/" target="_blank"><i class="fab fa-linkedin"></i></a>
+		<a class="facebook" href="https://fb.com/aligren" target="_blank"><i class="fab fa-facebook"></i></a>
+		<a class="mail" href="mailto:goren.ali@yandex.com" target="_blank"><i class="fas fa-envelope"></i></a>
+	</div>
+	<div class="footer col">
+		<blockquote><span class="quote"></span></blockquote>
+	</div>
+</div>
+
+

@@ -1,0 +1,78 @@
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Nova+Flat');
+	body { background: black; padding: 0px; margin: 0px; }
+	h2,h3,h4,h5,h6 { font-family: VERDANA; }
+	h1 { font-family: 'Nova Flat'; }
+	p {font-family: Verdana; font-size: 16px; }
+	.page { 
+	  display: grid;
+	  padding: 0; 
+	}
+	.header { 
+	  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+	  margin: 0px;
+	  color: #fff;
+	  padding: 8px 24px; 
+	} 
+	.cover {
+	  background: url(https://images.unsplash.com/photo-1495681224284-b145e91a2432?dpr=1&auto=compress,format&fit=crop&w=1907&h=&q=80&cs=tinysrgb&crop=);
+	  height: 80vh;
+	  background-size: cover;
+	  background-position: center;
+	  display: grid;
+	 
+
+	  align-content: center;
+	  
+	}
+	.cover h1 { 
+	  background: #fff;
+	  padding: 16px ;
+	  margin: 0px;
+	  width: 100%;
+	  box-sizing: border-box;
+	  max-width: 500px;
+	  text-align: left;
+	  background-image: -moz-linear-gradient(to right, rgba(250, 112, 154, .8) 0%, rgba(254, 225, 64, .8) 100%);
+	}
+	.cover p { 
+	  background: rgb(0, 0, 0, 0.9);
+	  color: #fff;
+	  padding:16px;
+	  margin: 0px;
+	  max-width: 500px;
+	  box-sizing: border-box;
+	}
+	.content {
+	  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+	  max-width: 1200px;
+	  width: 100%;
+	  margin: 32px auto;
+	}
+	.content h2 { padding: 16px; color: #fff; }
+
+</style>
+
+<div class="page">
+  <div class="header">
+    <h2>HEADER</h2>
+  </div>
+  <div class="cover">
+    
+    <h1>Welcome to landing page</h1>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. </p>
+  </div>
+  <div class="content">
+    <h2>ARTICLES</h2>
+    <div class="articles">
+      <div class="article">
+        <h3> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien.</h3>
+      </div>
+    </div>
+    </div>
+  <div class="footer"></div>
+</div>
+
+
+
+
